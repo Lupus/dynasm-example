@@ -1,0 +1,21 @@
+|.arch x64
+|.actionlist my_actionlist
+|
+|.macro begin_function
+|  push rbp
+|  mov rbp, rsp
+|.endmacro
+|
+|.macro end_function
+|  pop rbp
+|  ret
+|.endmacro
+
+
+static void create_my_function()
+{
+	|->my_function:
+	|  begin_function
+	|  mov eax, 0x0
+	|  end_function
+}
